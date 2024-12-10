@@ -1,0 +1,30 @@
+<!-- templates/emails/thank_you_email.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu donación</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+    <div style="max-width: 600px; margin: 20px auto; background: #ffffff; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <img src="{% static 'accounts/img/logoSinNombre.ico' %}" alt="FoodShared Logo" style="width: 100px; height: auto;">
+        <h1 style="color: #4CAF50;">¡Gracias por tu donación, {{ nombre_donante }}!</h1>
+        <p style="color: #333333; font-size: 16px; line-height: 1.5;">
+            Queremos agradecerte en nombre de <strong>{{ foodshared_nombre }}</strong> por tu generosidad y apoyo.
+        </p>
+        <h3 style="color: #4CAF50;">Detalles de tu donación:</h3>
+        <ul style="list-style: none; padding: 0; color: #555555; font-size: 14px; line-height: 1.6;">
+            <li><strong>Tipo de alimento:</strong> {{ tipo_alimento }}</li>
+            <li><strong>Cantidad:</strong> {{ cantidad }} unidades</li>
+            <li><strong>Método de entrega:</strong> {{ metodo_entrega }}</li>
+        </ul>
+        <p style="margin: 20px 0; font-size: 14px; color: #555555;">
+            ¡Tu donación ayuda a cambiar vidas!
+        </p>
+        <p style="font-size: 12px; color: #aaaaaa;">© {{ foodshared_nombre }} - Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>
+
