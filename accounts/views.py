@@ -183,7 +183,7 @@ def donate_food(request):
             )
 
             # Calcular la URL absoluta para el logo
-            logo_url = urljoin(request.build_absolute_uri('/'), static('accounts/img/logoSinNombre.ico'))
+            logo_url = urljoin(request.build_absolute_uri('/'), static('/accounts/img/logoSinNombre.ico'))
 
             # Enviar correo de agradecimiento
             subject = 'Gracias por tu donación - FoodShared'
